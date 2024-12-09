@@ -14,6 +14,11 @@ W = 1024
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 
+def create_dir(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+        
+
 def load_data(path):
     x = sorted(glob(os.path.join(path, "image", "*jpg")))
     y = sorted(glob(os.path.join(path, "mask", "*bmp")))
@@ -35,6 +40,7 @@ if __name__ == "__main__":
     tf.random.set_seed(42)
 
     """ Directory for storing files """
+    create_dir("result")
 
     """ Loading model """
     model = BCS_Net((H, W, 1))
