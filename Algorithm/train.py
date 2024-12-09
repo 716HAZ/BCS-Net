@@ -69,6 +69,11 @@ class IOU(object):
         return x
 
 
+def create_dir(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+
 def create_csv(path):
     title_list = ['epoch', 'train_loss', 'train_precision', 'train_recall', 'train_f1', 'train_iou', 'validation_loss',
                   'validation_precision', 'validation_recall', 'validation_f1', 'validation_iou']
@@ -134,6 +139,7 @@ if __name__ == "__main__":
     np.random.seed(42)
     tf.random.set_seed(42)
 
+    create_dir("weight")
     create_csv("weight")
 
     """ Hyperparameters """
