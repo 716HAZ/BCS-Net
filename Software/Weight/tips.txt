@@ -1,0 +1,1 @@
+Due to the upload memory limit (no more than 25MB per file), the weight files of the trained model are not included in the "Weight" file. And you can run "train.py" in the "Algorithm" file to train a new model by yourself.
