@@ -1,0 +1,1 @@
+epoch,train_loss,train_precision,train_recall,train_f1,train_iou,validation_loss,validation_precision,validation_recall,validation_f1,validation_iou
