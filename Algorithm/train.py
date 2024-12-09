@@ -139,6 +139,7 @@ if __name__ == "__main__":
     np.random.seed(42)
     tf.random.set_seed(42)
 
+    """ Directory for storing files """
     create_dir("weight")
     create_csv("weight")
 
